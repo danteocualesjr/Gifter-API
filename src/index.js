@@ -1,7 +1,12 @@
 import express from 'express';
-
-// Add more code here
+import path from 'path';
 
 const app = express();
 
-app.get('/*')
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(8000, () => console.log('Running on localhost:8000'));
+
+
