@@ -1,10 +1,12 @@
 import express from 'express';
 import path from 'path';
 import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
 
 import auth from './routes/auth';
 
 const app = express();
+app.user(bodyParser.json());
 mongoose.connect('mongodb://localhost/gifter', { useMongoClient: true });
 
 app.use('/api/auth', auth);
