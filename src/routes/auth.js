@@ -15,5 +15,3 @@ router.post('/', (req, res) => {
 });
 
 export default router;
-
-// Debug auth.js...
