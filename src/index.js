@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 import auth from './routes/auth';
 
 const app = express();
-app.user(bodyParser.json());
+app.use(bodyParser.json());
 mongoose.connect('mongodb://localhost/gifter', { useMongoClient: true });
 
 app.use('/api/auth', auth);
