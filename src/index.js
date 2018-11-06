@@ -9,7 +9,7 @@ import auth from './routes/auth';
 dotenv.config();
 const app = express();
 app.use(bodyParser.json());
-mongoose.connect('mongodb://localhost/gifter', { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URL, { useMongoClient: true });
 
 app.use('/api/auth', auth);
 
