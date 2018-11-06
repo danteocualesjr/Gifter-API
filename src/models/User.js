@@ -23,7 +23,7 @@ schema.methods.generateJWT = function generateJWT() {
     );
 };
 
-schema.methods.toAuthJSON = function toAuthJSON() {
+sc'hema.methods.toAuthJSON = function toAuthJSON() {
     return {
         email: this.email,
         token: this.generateJWT()
