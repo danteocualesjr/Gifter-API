@@ -8,6 +8,7 @@ router.post('/', (req, res) => {
     const { email, password } = req.body.user;
     const user = new User ({ email });
     user.setPassword(password);
+    user.save();
 });
 
 export default router;

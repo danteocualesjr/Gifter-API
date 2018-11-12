@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import uniqueValidator from 'mongoose-unique-validator';
 
 const schema = new mongoose.Schema(
     {
@@ -33,5 +34,7 @@ schema.methods.toAuthJSON = function toAuthJSON() {
         token: this.generateJWT()
     }
 };
+
+schema.plugin(uniqueValidator, { message: 'This email is not unique.' })
 
 export default mongoose.model('User', schema);
