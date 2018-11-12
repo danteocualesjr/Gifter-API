@@ -5,7 +5,13 @@ import uniqueValidator from 'mongoose-unique-validator';
 
 const schema = new mongoose.Schema(
     {
-        email: { type: String, required: true, lowercase: true, index: true },
+        email: { 
+            type: String, 
+            required: true, 
+            lowercase: true, 
+            index: true, 
+            unique: true 
+        },
         passwordHash: { type: String, required: true }
     },
     { timestamps: true }
