@@ -13,7 +13,8 @@ const schema = new mongoose.Schema(
             unique: true 
         },
         passwordHash: { type: String, required: true },
-        confirmed: { type: Boolean, default: false }
+        confirmed: { type: Boolean, default: false },
+        confirmationToken: { type: String, default: ""}
     },
     { timestamps: true }
 );
