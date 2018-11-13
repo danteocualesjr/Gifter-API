@@ -27,6 +27,10 @@ schema.methods.setPassword = function setPassword(password) {
     this.passwordHash = bcrypt.hashSync(password, 10);
 };
 
+schema.methods.setConfirmationToken = function setConfirmationToken() {
+    this.confirmationToken = this.generateJWT();
+};
+
 schema.methods.generateJWT = function generateJWT() {
     return jwt.sign(
         {
