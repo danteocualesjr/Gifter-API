@@ -22,7 +22,7 @@ export function sendConfirmationEmail(user) {
         text: `
         Welcome to Gifter! Please confirm your email below.
 
-        ${user.generateConfirmationUrl}
+        ${user.generateConfirmationUrl()}
         `
     }
 
