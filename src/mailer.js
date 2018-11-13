@@ -21,6 +21,10 @@ export function sendConfirmationEmail(user) {
         subject: "Welcome to Gifter!",
         text: `
         Welcome to Gifter! Please confirm your email below.
+
+        ${user.generateConfirmationUrl}
         `
     }
+
+    transport.sendMail(email);
 }
