@@ -25,4 +25,15 @@ router.post('/confirmation', (req, res) => {
     );
 });
 
+router.post("/reset_password_request", (req, res) => {
+    User.findOne({ email: req.body.email }).then(user => {
+        if (user) {
+            sendResetPasswordEmail(user);
+            res.json({});
+        } else {
+            res.status(400).json({ errors: { global: "No user with that email exists."}});
+        }
+    });
+});
+
 export default router;
