@@ -35,6 +35,10 @@ schema.methods.generateConfirmationUrl = function generateConfirmationUrl() {
     return `${process.env.HOST}/confirmation/${this.confirmationToken}`;
 }
 
+schema.methods.generateResetPasswordLink = function generateResetPasswordLink() {
+    return `${process.env.HOST}/reset_password/${this.generateResetPasswordToken()}`
+}
+
 schema.methods.generateJWT = function generateJWT() {
     return jwt.sign(
         {
