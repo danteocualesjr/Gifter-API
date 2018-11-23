@@ -39,4 +39,14 @@ router.post("/reset_password_request", (req, res) => {
     });
 });
 
+router.post("/validate_token", (req, res) => {
+    jwt.verify(req.body.token, process.env.JWT_SECRET, err => {
+        if (err) {
+            res.status(401).json({});
+        } else {
+            res.json({});
+        }
+    })
+});
+
 export default router;
