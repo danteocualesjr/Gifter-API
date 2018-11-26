@@ -60,7 +60,9 @@ router.post("/reset_password", (req, res) => {
                 if (user) {
                     user.setPassword(password);
                     user.save().then(() => res.json({}));
-                } 
+                } else {
+                    res.status(404).json({ errors: { global: "Invalid token" }});
+                }
             })
         }
     })
