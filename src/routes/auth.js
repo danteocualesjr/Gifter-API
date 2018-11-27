@@ -27,8 +27,6 @@ router.post('/confirmation', (req, res) => {
     );
 });
 
-// TODO: Possible bug below.
-
 router.post("/reset_password_request", (req, res) => {
     User.findOne({ email: req.body.email }).then(user => {
         if (user) {
