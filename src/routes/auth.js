@@ -3,6 +3,8 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User';
 import { sendResetPasswordEmail } from '../mailer';
 
+// Add contents
+
 const router = express.Router();
 
 router.post('/', (req, res) => {
