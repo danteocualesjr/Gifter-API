@@ -63,11 +63,11 @@ router.post("/reset_password", (req, res) => {
                 } else {
                     res.status(404).json({ errors: { global: "Invalid token" }});
                 }
-            })
+            });
         }
-    })
+    });
 });
 
-// Define another route here.
+
 
 export default router;
