@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 
+// Change email address.
 const from = '"Gifter" <info@gifter.com>';
 
 function setup() {
