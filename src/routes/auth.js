@@ -68,6 +68,4 @@ router.post("/reset_password", (req, res) => {
     });
 });
 
-// TODO: Define more routes here.
-
 export default router;
