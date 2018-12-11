@@ -6,4 +6,6 @@ router.get("/search", (req, res) => {
 
 });
 
+// Define more routes here.
+
 export default router;
