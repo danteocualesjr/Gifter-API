@@ -11,6 +11,12 @@ router.get("/search", (req, res) => {
                 title: "Don't Let the Pigeon Drive the Bus",
                 author: "---",
             },
+            {
+                giftId: 2,
+                type: "book",
+                title: "This is Not My Hat",
+                author: "---",
+            },            
         ]
     })
 });
