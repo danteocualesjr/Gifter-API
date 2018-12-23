@@ -16,7 +16,13 @@ router.get("/search", (req, res) => {
                 type: "book",
                 title: "This is Not My Hat",
                 author: "---",
-            },            
+            },
+            {
+                giftId: 3,
+                type: "book",
+                title: "I Sold my Dad for 12 Goldfish",
+                author: "Neil Gaiman",
+            },                        
         ]
     })
 });
