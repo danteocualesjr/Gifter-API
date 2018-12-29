@@ -6,6 +6,7 @@ import Gift from '../models/Gift';
 import parseErrors from '../utils/parseErrors';
 
 const router = express.Router();
+router.use(authenticate);
 
 router.get("/search", (req, res) => {
     res.json({
