@@ -43,7 +43,11 @@ router.get("/search", (req, res) => {
 router.get("/fetchPages", (req, res) => {
     const giftId = req.query.giftId;
 
-    
+    request
+        .get(
+            `https://www.goodreads.com/book/show.xml?key=${process.env
+            .GOODREADS_KEY}&id=${goodreadsId}`
+        )
 })
 
 export default router;
