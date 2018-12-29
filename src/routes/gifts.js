@@ -40,4 +40,10 @@ router.get("/search", (req, res) => {
         );
 });
 
+router.get("/fetchPages", (req, res) => {
+    const giftId = req.query.giftId;
+
+    
+})
+
 export default router;
