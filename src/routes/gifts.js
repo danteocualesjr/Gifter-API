@@ -48,6 +48,15 @@ router.get("/fetchPages", (req, res) => {
             `https://www.goodreads.com/book/show.xml?key=${process.env
             .GOODREADS_KEY}&id=${goodreadsId}`
         )
-})
+        .then(result =>
+            parseString(result, (err, giftResult) => {
+                const numPages = giftResult.GiftResponse.book[0].num_pages[0];
+                const pages = numPages ? parseInt(numPages, 10) : 0;
+                res.json({
+                    pages
+                });
+            })
+        );
+});
 
 export default router;
