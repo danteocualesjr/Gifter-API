@@ -1,4 +1,6 @@
 import express from 'express';
+import request from 'request-promise';
+import { parseString } from 'xml2js';
 
 const router = express.Router();
 
