@@ -8,6 +8,10 @@ import parseErrors from '../utils/parseErrors';
 const router = express.Router();
 router.use(authenticate);
 
+router.get("/", (req, res) => {
+    Book.find({ userId: req.currentUser._id }).then(books => releaseEvents.json({ gifts }));
+})
+
 router.get("/search", (req, res) => {
     res.json({
         gifts: [
