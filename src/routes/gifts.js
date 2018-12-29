@@ -1,6 +1,9 @@
 import express from 'express';
 import request from 'request-promise';
 import { parseString } from 'xml2js';
+import authenticate from '../middlewares/authenticate';
+import Gift from '../models/Gift';
+import parseErrors from '../utils/parseErrors';
 
 const router = express.Router();
 
